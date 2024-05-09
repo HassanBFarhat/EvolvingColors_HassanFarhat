@@ -6,6 +6,7 @@ class Plant {
         this.y = theOther.y;
         this.growth = 0;
         this.growthRate = parseInt(document.getElementById("plantgrowth").value);
+        this.size = parseInt(document.getElementById("plantsize").value);
     }
 
     mutation() {
@@ -43,11 +44,11 @@ class Plant {
         ctx.strokeStyle = "dark gray";
         ctx.fillRect(this.x * params.size, 
                      this.y * params.size, 
-                     params.size, 
-                     params.size);
+                     this.size,
+                     this.size);
         ctx.strokeRect(this.x * params.size, 
                        this.y * params.size, 
-                       params.size, 
-                       params.size);
+                       this.size,
+                       this.size);
     }
 }

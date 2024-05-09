@@ -5,6 +5,7 @@ class Animat {
         this.x = theOther.x;
         this.y = theOther.y;
         this.energy = 10;
+        this.size = parseInt(document.getElementById("animatsize").value);
     }
 
     movement() {
@@ -90,7 +91,8 @@ class Animat {
         ctx.beginPath();
         ctx.arc((this.x + 0.5) * params.size, 
                 (this.y + 0.5) * params.size, 
-                params.size / 2 - 1, 0, 2 * Math.PI);
+                this.size / 2,
+                0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
     }
