@@ -12,49 +12,81 @@
     <script type="text/javascript" src="./util.js"></script>
     <script type="text/javascript" src="./main.js"></script>
   </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    canvas {
+      background: white;
+      border: 1px solid black;
+    }
+
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slider-container {
+      text-align: center;
+    }
+
+    .slider-container input {
+      margin: 5px;
+    }
+  </style>
   <body>
     <canvas
       id="gameWorld"
-      width="1024"
+      width="1280"
       height="768"
       style="background: white; border: 1px solid black"
       tabindex="0"
       autofocus
     ></canvas>
-    <div class="slider-container">
-      <label for="plantgrowth">Plant Growth</label>
-      <input
-        type="range"
-        id="plantgrowth"
-        min="1"
-        max="80"
-        value="20"
-        class="slider"
-      />
+    <div style="text-align: center">
+      <div class="slider-container">
+        <label for="plantgrowth">Plant Growth</label>
+        <input
+          type="range"
+          id="plantgrowth"
+          min="1"
+          max="80"
+          value="20"
+          class="slider"
+        />
 
-      <label for="animatgrowth">Animat Growth</label>
-      <input
-        type="range"
-        id="animatgrowth"
-        min="1"
-        max="80"
-        value="4"
-        class="slider"
-      />
+        <label for="animatgrowth">Animat Growth</label>
+        <input
+          type="range"
+          id="animatgrowth"
+          min="1"
+          max="80"
+          value="4"
+          class="slider"
+        />
 
-      <label for="animatselection">Animat Food Selectivity</label>
-      <input
-        type="range"
-        id="animatselection"
-        min="-1"
-        max="1"
-        value="0"
-        step="0.05"
-        class="slider"
-      />
+        <label for="animatselection">Animat Food Selectivity</label>
+        <input
+          type="range"
+          id="animatselection"
+          min="-1"
+          max="1"
+          value="0"
+          step="0.05"
+          class="slider"
+        />
+      </div>
+      <button type="button" id="plant" class="button">Add Plant</button>
+      <button type="button" id="animat" class="button">Add Animat</button>
+      <button type="button" id="clear" class="button">Clear All</button>
     </div>
-    <button type="button" id="plant" class="button">Add Plant</button>
-    <button type="button" id="animat" class="button">Add Animat</button>
-    <button type="button" id="clear" class="button">Clear All</button>
   </body>
 </html>

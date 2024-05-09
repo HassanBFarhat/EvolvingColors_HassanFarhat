@@ -1,7 +1,7 @@
 /** Global Parameters Object */
 const params = {
-    dimension: 100,
-    size: 10, // 1000/dimension
+    dimension: 128,
+    size: 10, // 1280/dimension
     
 };
 
